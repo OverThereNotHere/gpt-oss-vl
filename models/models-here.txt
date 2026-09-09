@@ -1,0 +1,2 @@
+
+place the models from huggingface (as is, gpt-oss-2ob, siglip2-so400m-naflex, and stage2_final.pt) in here and you're good to go
