@@ -1,7 +1,7 @@
 # gpt-oss-vl
 
 A vision-language model built by **bolting a translator onto a frozen
-20B reasoning model** — no new architecture, no new tokens, no touching the
+20B reasoning model** — no new architecture, no new tokens (well, technically), no touching the
 brain's weights.
 
 ## What this is
