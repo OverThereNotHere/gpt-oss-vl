@@ -75,8 +75,7 @@ the other**:
 | `stage2_final.pt` | our trained artifacts: `{"adapter": 16.5M, "lora": 96 A/B inserts, "step": 1250}` |
 
 Weights live on Hugging Face (GitHub's 100MB limit makes them a non-starter
-here). The `runner/` folder is the load-splice-generate recipe, packaged
-into one script.
+here).
 
 
 ## Credits
