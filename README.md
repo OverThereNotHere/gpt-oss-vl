@@ -63,7 +63,7 @@ the other**:
 
 - **GitHub (this repo)** — the runner and the story. Without the weights
   it's a car manual with no car.
-- **Hugging Face (<hf-repo-url>)** — the three weights pieces. Without the
+- **Hugging Face (https://huggingface.co/NotHereNorThere/gpt-oss-vl-exp)** — the three weights pieces. Without the
   code they're three inert piles of numbers.
 
 ## Weights
