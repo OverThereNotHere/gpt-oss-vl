@@ -1,10 +1,10 @@
 # gpt-oss-vl runner
 
-> **Status: v0.1 — one-shot mode works.** Edit the CONFIG block at the top
+> **Status: v0.2 — one-shot mode works.** Edit the CONFIG block at the top
 > of `run_vlm.py` (models folder, optional image path/URL, question), run
 > `python run_vlm.py`, get the raw harmony output plus the final answer.
 > No CLI flags, no chat loop yet — deliberate, one thing at a time.
-> Chat REPL, follow-ups and URL polish are the planned v0.2.
+> Chat REPL, follow-ups and URL polish are the planned v0.3.
 
 ## Setup
 
@@ -33,7 +33,7 @@ Greedy is also the scientific instrument: same inputs give byte-identical
 outputs, so toggling `APPLY_LORA` isolates exactly what the trained inserts
 change.
 
-## What this will be
+## What this is
 
 A small, dependency-light script (`run_vlm.py`) that assembles the three
 weights pieces into a working model and answers questions about images:
@@ -73,17 +73,9 @@ transformer treats the 256 image vectors exactly like text tokens because
 they live in the same vector space. If you want to reimplement this in
 another engine, those four steps are the whole spec.
 
-## Requirements (planned)
-
-- One 80GB-class GPU for bf16 (or ~24GB with MXFP4 + offload tricks — untested)
-- `torch`, `transformers`, `pillow`, `safetensors`
-- The weights from the Hugging Face repo (see the main README)
 
 ## Relationship to the rest of the project
 
 - **Weights alone don't run** — they're three inert piles of numbers until
   something splices them. This runner (with the `mmv/` package it imports)
   is that something.
-- The runner is derived from the training/eval code in the repo root
-  (`mmv/`, `modal_app.py`); it exists so you don't need to know Modal or
-  the training history to use the model.
