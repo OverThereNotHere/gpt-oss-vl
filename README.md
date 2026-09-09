@@ -43,17 +43,6 @@ eye (SigLIP2-so400m)  →  translator (adapter + LoRA)  →  brain (gpt-oss-20b)
         428M params              16.5M + 7.96M                20.9B, frozen
 ```
 
-Planned usage (interface draft — subject to the actual implementation):
-
-```bash
-pip install -r requirements.txt   # torch, transformers, pillow, safetensors
-
-python run_vlm.py \
-  --models-dir ~/gpt-oss-vl/models \
-  --image path/to/image.png \
-  --question "What is shown in this image?"
-```
-
 ## What it does under the hood (so you can port it)
 
 1. Loads gpt-oss-20b (bf16 on GPU) and SigLIP2 (NaFlex, native aspect ratio,
