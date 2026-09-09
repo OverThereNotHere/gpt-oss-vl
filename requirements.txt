@@ -1,0 +1,17 @@
+# gpt-oss-vl runner
+# Python 3.10+ recommended. Use a venv:
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+
+# brain: gpt-oss needs torch 2.7+ (mxfp4), transformers 4.55+ (gpt-oss arch),
+# and triton 3.4+ so MXFP4 loads natively (~13GB) instead of dequantizing
+# to bf16 (~41GB). Linux: plain `triton`. Windows: `triton-windows`.
+torch>=2.7
+transformers>=4.55
+triton>=3.4; sys_platform == "linux"
+triton-windows>=3.4; sys_platform == "win32"
+
+# eye + glue
+pillow
+safetensors
+requests
